@@ -1,0 +1,11 @@
+label,code
+safe,"def get_user(id):\n    query = 'SELECT * FROM users WHERE id = %s'\n    cursor.execute(query, (id,))\n    return cursor.fetchone()"
+vulnerable,"def get_user(id):\n    query = 'SELECT * FROM users WHERE id = ' + id\n    cursor.execute(query)\n    return cursor.fetchone()"
+safe,"import os\n\ndef connect():\n    password = os.environ.get('DB_PASSWORD')\n    return password"
+vulnerable,"def connect():\n    password = 'supersecret123'\n    return password"
+safe,"def evaluate_expression(x: str):\n    # Safe: using limited parser instead of eval\n    return int(x) if x.isdigit() else 0"
+vulnerable,"def evaluate_expression(expr: str):\n    return eval(expr)"
+safe,"def login(user, password):\n    stored_hash = get_hash_from_db(user)\n    return verify_password(password, stored_hash)"
+vulnerable,"AWS_ACCESS_KEY_ID = 'AKIA1234567890ABCDEF'\nAWS_SECRET_ACCESS_KEY = 'abcd1234abcd1234abcd1234abcd1234abcd1234'"
+
+

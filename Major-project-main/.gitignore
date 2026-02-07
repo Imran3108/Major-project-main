@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+venv/
+.venv/
+
+# Env files (never commit secrets)
+.env
+
+# Project artifacts
+logs/
+models/
+
+
