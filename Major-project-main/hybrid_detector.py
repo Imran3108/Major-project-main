@@ -23,7 +23,7 @@ def compute_severity(
         return "HIGH"
     if has_static or ml_flag:
         return "MEDIUM"
-    return "SAFETY"
+    return "SAFE"
 
 
 def analyze_file(file_path: str, code: str) -> Dict[str, Any]:
