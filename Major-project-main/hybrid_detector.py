@@ -7,7 +7,7 @@ from static_analysis import analyze_code_static
 def compute_severity(
     static_findings: List[Dict[str, Any]],
     ml_result: Dict[str, Any],
-    ml_threshold: float = 0.5,
+    ml_threshold: float = 0.7,
 ) -> str:
     """
     Hybrid decision engine:
