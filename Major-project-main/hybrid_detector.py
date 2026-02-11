@@ -20,7 +20,7 @@ def compute_severity(
     ml_flag = ml_prob >= ml_threshold or ml_result.get("label") == "vulnerable"
 
     if has_static and ml_flag:
-        return "HIGH"
+        return "HIGHty"
     if has_static or ml_flag:
         return "MEDIUM"
     return "SAFE"
